@@ -1,0 +1,134 @@
+.linkCoolHover {
+	.v1 {
+		a {
+			position: relative;
+			display: inline-block;
+			font-size: 2em;
+			font-weight: 800;
+			color: royalblue;
+			overflow: hidden;
+			background: linear-gradient(to right, midnightblue, midnightblue 50%, royalblue 50%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-size: 200% 100%;
+			background-position: 100%;
+			transition: background-position 275ms ease;
+			text-decoration: none;
+
+			// text decorations are clipped in WebKit browsers
+			&:hover {
+				background-position: 0 100%;
+			}
+		}
+	}
+
+	.v2 {
+		a {
+			position: relative;
+			display: inline-block;
+			font-size: 2em;
+			color: royalblue;
+			font-weight: 800;
+			text-decoration: underline;
+			overflow: hidden;
+
+			&::before {
+				position: absolute;
+				content: attr(data-content);
+				top: 0;
+				left: 0;
+				width: 0;
+				color: midnightblue;
+				text-decoration: underline;
+				white-space: nowrap;
+				overflow: hidden;
+				transition: width 275ms ease;
+			}
+
+			&.v2-height {
+				&::before {
+					width: auto;
+					transition: height 275ms ease;
+					height: 0;
+				}
+
+				&:hover::before {
+					height: 100%;
+				}
+			}
+
+			&:hover::before {
+				width: 100%;
+			}
+		}
+	}
+
+	.v3 {
+		a {
+			position: relative;
+			display: inline-block;
+			font-size: 2em;
+			color: royalblue;
+			font-weight: 800;
+			text-decoration: underline;
+			overflow: hidden;
+			transition: clip-path 275ms ease;
+
+			&:hover::before {
+				clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+			}
+
+			&::before {
+				position: absolute;
+				content: attr(data-content);
+				color: midnightblue;
+				text-decoration: underline;
+				clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+				transition: clip-path 275ms ease;
+			}
+		}
+	}
+
+	.v4 {
+		a {
+			position: relative;
+			display: inline-block;
+			font-size: 2em;
+			color: royalblue;
+			font-weight: 800;
+			text-decoration: underline;
+			// text-decoration: none;
+			overflow: hidden;
+
+			span {
+				position: absolute;
+				top: 0;
+				left: 0;
+				overflow: hidden;
+				transform: translateX(-100%);
+				transition: transform 275ms ease;
+
+				&::before {
+					display: inline-block;
+					content: attr(data-content);
+					//color to be filled
+					color: midnightblue;
+					transform: translateX(100%);
+					transition: transform 275ms ease;
+					text-decoration: underline;
+				}
+			}
+
+			&:hover {
+				span {
+					transform: translateX(0);
+
+					&::before {
+						transform: translateX(0);
+					}
+				}
+			}
+		}
+	}
+}

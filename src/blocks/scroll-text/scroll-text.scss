@@ -1,0 +1,20 @@
+.touch-device .line-box {
+	width: 600px;
+}
+
+.line-box {
+	background: #eee;
+	overflow: hidden;
+	margin: -5px 0 20px;
+	padding: 5px 0;
+	width: 100%;
+}
+
+.line-box .line-wrap {
+	width: 99999px;
+	float: left;
+}
+
+.line-box p {
+	margin: 0 5px 0 0;
+}

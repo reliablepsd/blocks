@@ -1,0 +1,61 @@
+.AspectRatioBoxes {
+	.row {
+		display: grid;
+		align-items: start;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 0px 40px;
+		@include media("<=tablet") {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.aspect-ratio-box {
+		background: blue;
+		position: relative;
+		padding: 30px;
+		font-size: 24px;
+		margin-bottom: 50px;
+		width: 100%;
+	}
+
+	.aspect-ratio-box::before {
+		content: "";
+		width: 1px;
+		margin-left: -1px;
+		float: left;
+		height: 0;
+		padding-top: 20%;
+	}
+
+	.aspect-ratio-box::after {
+		/* to clear float */
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	.hero {
+		display: flex;
+		align-items: center;
+		text-align: center;
+
+		img {
+			z-index: 1;
+			width: 100%;
+			max-width: none;
+			height: 100%;
+			object-fit: cover;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.container {
+			position: relative;
+			width: 100%;
+			z-index: 2;
+			padding: 20px;
+		}
+	}
+}

@@ -1,0 +1,36 @@
+.a-hidden {
+	opacity: 0;
+}
+
+.a-visible {
+	opacity: 1;
+}
+
+.animated {
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+
+.animated.infinite {
+	animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+	animation-duration: 2s;
+}
+
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translate3d(0, 50px, 0)
+	}
+
+	100% {
+		opacity: 1;
+		transform: none
+	}
+}
+
+.fadeInUp {
+	animation-name: fadeInUp
+}

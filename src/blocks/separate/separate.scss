@@ -1,0 +1,19 @@
+.separate {
+	display: flex;
+	align-items: center;
+
+	&:before,
+	&:after {
+		content: '';
+		flex-grow: 1;
+		height: 2px;
+		background-color: #a9aba9;
+	}
+
+	.separate-inner {
+		padding-left: 10px;
+		padding-right: 10px;
+		max-width: 80%;
+		text-align: center;
+	}
+}

@@ -1,0 +1,23 @@
+<div class="description-block">
+	<p>В скрипте доступны следующие опции:</p>
+	<pre class="javascript">
+		jQuery('div.toggle-block').openClose({
+			addClassBeforeAnimation: true,     // изменять класс "active" до навигации
+			activeClass:'active',              // активный класс при раскрытом состоянии
+			opener:'.opener',                  // селектор ссылки-опенера
+			slider:'.slide',                   // селектор блока-слайдера
+			animSpeed: 400,                    // длительность анимации (400мсек = 0,4сек)
+			effect:'fade',                     // эффект "fade", "slide" или "none"
+			event:'click'                      // при каком событии на opener должно происходить открытие опен-клоус
+			initcallback: function(){}         // вызов CallBack
+		});
+	</pre>
+</div>
+<div class="live-example">
+	<div class="toggle-block">
+		<a class="opener" href="#"><span>+ View More</span><em>- View Less</em></a>
+		<div class="toggle-slide">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dui neque, tempor in, fermentum vel, rutrum aliquam, mi. In quis massa adipiscing urna consequat mollis. Maecenas et leo. Suspendisse iaculis odio. In ac eros. Quisque elementum, justo non mattis pellentesque, odio nibh euismod dolor, quis scelerisque metus lacus consequat nisi. Sed nec turpis. Aenean ultrices purus dapibus orci. Fusce erat. Vivamus quis dolor vitae mi vulputate mollis. Sed tellus elit, tempus et, semper a, tincidunt in, justo.</p>
+		</div>
+	</div>
+</div>

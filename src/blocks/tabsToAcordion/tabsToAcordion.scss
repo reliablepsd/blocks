@@ -1,0 +1,82 @@
+.r-tabs {
+	--r-tab-nav-background: rgb(140, 141, 55);
+	--r-tab-nav-background-active: rgb(30, 30, 138);
+	--r-tab-nav-color: #000;
+	--r-tab-nav-color-active: #fff;
+}
+
+.r-tabs-nav {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	li {
+		a {
+			padding: 10px 15px;
+			color: var(--r-tab-nav-color);
+			background-color: var(--r-tab-nav-background);
+			display: inline-block;
+		}
+		&.r-tabs-state-active {
+			a {
+				color: var(--r-tab-nav-color-active);
+				background-color: var(--r-tab-nav-background-active);
+			}
+		}
+	}
+	@include media("<=tablet") {
+		display: none;
+	}
+}
+
+.r-tabs-tab {
+	margin: 0;
+	list-style: none;
+}
+
+.r-tabs-panel {
+	padding: 20px 15px;
+	display: none;
+	background-color: tomato;
+	&.r-tabs-state-active {
+		display: block;
+	}
+}
+
+.r-tabs-accordion-title {
+	display: none;
+	a {
+		padding: 10px 15px;
+		display: block;
+		background-color: var(--r-tab-nav-background);
+		color: var(--r-tab-nav-color);
+	}
+	&.r-tabs-state-active {
+		a {
+			color: var(--r-tab-nav-color-active);
+			background-color: var(--r-tab-nav-background-active);
+		}
+	}
+	@include media("<=tablet") {
+		display: block;
+	}
+}
+
+.tabs-vert {
+	@include media(">tablet") {
+		display: grid;
+		grid-template-columns: 280px 1fr;
+		grid-gap: 20px;
+		.r-tabs-nav {
+			flex-direction: column;
+			li {
+				@include liY(10px);
+			}
+			a {
+				display: block;
+			}
+		}
+		.r-tabs-panel {
+			height: 100%;
+		}
+	}
+}

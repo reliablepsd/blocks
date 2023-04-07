@@ -1,0 +1,37 @@
+%fz-clamp-s {
+	--min-fs: 2rem;
+	--max-fs: 5rem;
+	font-size: var(--max-fs);
+	@include media("<=desktop-md") {
+		font-size: clamp(var(--min-fs), var(--min-fs) + 1vw, var(--max-fs) );
+	}
+	@include media("<=phone-xs") {
+		font-size: var(--min-fs);
+	}
+}
+%fz-clamp-d {
+	--min-fs: 2;
+	--max-fs: 5;
+	--min-vw: 36;
+	--max-vw: 145;
+
+	--min-fs-rem: var(--min-fs) * 1rem;
+	--max-fs-rem: var(--max-fs) * 1rem;
+	--min-vw-rem: var(--min-vw) * 1rem;
+
+	--slope: (var(--max-fs) - var(--min-fs)) * (100vw - var(--min-vw-rem)) / (var(--max-vw) - var(--min-vw));
+
+	font-size: clamp(var(--min-fs-rem), var(--min-fs-rem) + var(--slope), var(--max-fs-rem));
+}
+.clamp-font {
+	h2 {
+		@extend %fz-clamp-s;
+		--min-fs: 30px;
+		--max-fs: 5rem;
+	}
+	h3 {
+		@extend %fz-clamp-d;
+		--min-fs: 3;
+		--max-fs: 5;
+	}
+}

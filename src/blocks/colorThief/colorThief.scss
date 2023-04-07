@@ -1,0 +1,18 @@
+.colorThiefimgPalette,
+.colorThiefimgDominant {
+	--colorThiefimgPalette: tomato;
+	span {
+		display: inline-block;
+		position: relative;
+		padding-left: 30px;
+		margin-bottom: 10px;
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			@include size(20px, 20px);
+			background-color: var(--colorThiefimgPalette);
+		}
+	}
+}

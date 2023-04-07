@@ -1,0 +1,35 @@
+.accordion {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		width: 100%;
+		li {
+				border: 1px solid #000;
+				margin: 0 0 -1px;
+		}
+		.opener {
+				display: block;
+				color: #000;
+				height: 1%;
+				text-decoration: none;
+				line-height: 30px;
+				padding: 0 10px;
+				background: #999;
+		}
+		.active {
+				.slide {
+						.opener {
+								background: #999;
+						}
+				}
+		}
+		p {
+				margin: 0;
+				padding: 10px;
+				background: #CCC;
+		}
+}
+.accordion li.active .opener,
+.accordion li.active li.active .opener {
+		background: #aaf;
+}

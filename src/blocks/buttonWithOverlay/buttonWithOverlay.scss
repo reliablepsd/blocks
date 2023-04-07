@@ -1,0 +1,46 @@
+.button {
+	position: relative;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	background: #ed1c24;
+	background: linear-gradient(10deg, #7c2350, #ed1c24);
+	color: #fff;
+	font-weight: 500;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	border: 0;
+	padding: 0 25px;
+	cursor: pointer;
+	overflow: hidden;
+	outline: none;
+	letter-spacing: -.33px;
+	font-size: 15px;
+	line-height: 64px;
+	width: 100%;
+	max-width: 360px;
+	border-radius: 32px;
+}
+
+.sbutton {
+	background: linear-gradient(10deg, #7c2350, #ed1c24);
+}
+
+.sbutton:hover::before {
+	--size: 400px;
+}
+
+.sbutton::before {
+	--size: 0;
+	content: '';
+	position: absolute;
+	left: var(--x);
+	top: var(--y);
+	width: var(--size);
+	height: var(--size);
+	background: radial-gradient(circle closest-side, #173583, transparent);
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-webkit-transition: width .2s ease, height .2s ease;
+	transition: width .2s ease, height .2s ease;
+}

@@ -1,0 +1,13 @@
+.text-gradient {
+	color: #cfeb12;
+	font-size: 60px;
+}
+
+@supports (-webkit-background-clip: text) {
+	.text-gradient {
+		-webkit-text-fill-color: transparent;
+		background-image: linear-gradient(90deg, red 0%, blue 100%);
+		background: -o-linear-gradient(transparent, transparent);
+		-webkit-background-clip: text;
+	}
+}

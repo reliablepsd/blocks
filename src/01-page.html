@@ -1,0 +1,35 @@
+---
+title: Blocks part - 1
+---
+{% import 'src/template/macrosAndVariable.html' as global %}
+{% include 'src/template/head.html' %}
+
+<body>
+	<div class="wrapper">
+		{% include 'src/template/header.html' %}
+		<main class="main">
+			<div class="container c-block" style="margin-top: 50px;">
+				<h2>Command - <span>npm run add accordion</span></h2>
+				<div class="d-block">
+					<p>Простой аккордион - возможные опции ниже</p>
+					<pre>jQuery('ul.accordion').slideAccordion({
+						activeClass:'open',      // класс "active" открытого состояния
+						opener:'>a.opener',      // селектор ссылки-opener
+						slider:'>div.slide',     // селектор дропа аккордиона
+						collapsible:false,       // разрешать сворачивать активный элемент аккордиона
+						animSpeed: 300,          // скорость анимации аккордиона
+						scrollToActiveItem: {    // прокрутка к активному элементу аккордиона
+							enable: true,
+							breakpoint: 1920, // max-width
+							animSpeed: 600,
+							extraOffset: null
+						}});
+					</pre>
+					</div>
+				{% include 'src/blocks/accordion/accordion.html' %}
+			</div>
+		</main>
+	</div>
+	{% include 'src/template/includes.html' %}
+</body>
+</html>

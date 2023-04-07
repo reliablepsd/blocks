@@ -1,0 +1,14 @@
+.hqy-lazy {
+	opacity: 0;
+	transition: opacity 500ms ease-in-out 100ms;
+}
+
+.hqy-loaded {
+	opacity: 1;
+}
+
+.hqy-bac {
+	@include aspect-ratio(1200,200,"");
+	background-size: cover;
+	background-repeat: no-repeat;
+}

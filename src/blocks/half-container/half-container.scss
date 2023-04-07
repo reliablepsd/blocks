@@ -1,0 +1,76 @@
+.half-info {
+	display: flex;
+
+	@include media("<=tablet") {
+		flex-direction: column;
+	}
+
+	.bg-stretch {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+
+		img {
+			width: 100%;
+			max-width: none;
+			height: 100%;
+			object-fit: cover;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+
+.half-left {
+	width: 50%;
+	text-align: left;
+
+	@include media("<=tablet") {
+		width: 100%;
+	}
+}
+
+.half-right {
+	width: 50%;
+	text-align: left;
+
+	@include media("<=tablet") {
+		width: 100%;
+	}
+}
+
+.half-img {
+	min-height: 300px;
+	position: relative;
+}
+
+.left-container {
+	max-width: $container-width-full / 2;
+	padding-left: $container-pading-left;
+	margin-left: auto;
+	@include media("<tablet") {
+		padding: 0 30px;
+		max-width: none;
+	}
+	@include media("<phone") {
+		padding: 0 15px;
+	}
+}
+
+.right-container {
+	max-width: $container-width-full / 2;
+	padding-right: $container-pading-right;
+	margin-right: auto;
+	@include media("<tablet") {
+		padding: 0 30px;
+		max-width: none;
+	}
+	@include media("<phone") {
+		padding: 0 15px;
+	}
+}

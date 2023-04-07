@@ -1,0 +1,15 @@
+.error-response,
+.success-response {
+	font-weight: 700;
+	text-align: center;
+	display: none;
+	padding: 1em .5em;
+}
+
+.success-response {
+	color: green;
+}
+
+.error-response {
+	color: red;
+}

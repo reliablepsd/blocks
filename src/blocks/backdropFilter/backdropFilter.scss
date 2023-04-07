@@ -1,0 +1,88 @@
+.container-backdropFilterInit {
+	background-color: black;
+	background-image: url('https://placeimg.com/1300/400/any');
+	background-size: cover;
+	height: 400px;
+	padding: 10px;
+	width: 100%;
+	position: relative;
+
+	.boxes-backdropFilterInit {
+		display: flex;
+		margin-right: 10px;
+		overflow: scroll;
+		min-height: 400px;
+		width: 100%;
+		align-items: center;
+
+		p {
+			display: block;
+			font-weight: 600;
+			min-width: 200px;
+			color: white;
+			font-size: 40px;
+		}
+	}
+
+	.box-backdropFilterInit {
+		border: 1px solid rgba(255, 255, 255, .7);
+		min-width: 300px;
+		min-height: 350px;
+		line-height: 1;
+		padding: 15px 15px;
+		transition: all .3s ease;
+
+		&:nth-child(1n + 1) {
+			border-right: none;
+		}
+
+		h2 {
+			color: tomato;
+			font-size: 18px;
+		}
+	}
+
+	.none {
+		backdrop-filter: none;
+	}
+
+	.grayscale {
+		backdrop-filter: grayscale(1);
+	}
+
+	.brightness {
+		backdrop-filter: brightness(1.5);
+	}
+
+	.blur {
+		backdrop-filter: blur(5px);
+	}
+
+	.contrast {
+		backdrop-filter: contrast(.8);
+	}
+
+	.drop-shadow {
+		backdrop-filter: drop-shadow(4px 4px 10px blue);
+	}
+
+	.invert {
+		backdrop-filter: invert(.7);
+	}
+
+	.opacity {
+		backdrop-filter: opacity(.4);
+	}
+
+	.sepia {
+		backdrop-filter: sepia(.4);
+	}
+
+	.saturate {
+		backdrop-filter: saturate(1.8);
+	}
+
+	.hue-rotate {
+		backdrop-filter: hue-rotate(120deg);
+	}
+}

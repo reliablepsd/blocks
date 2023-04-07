@@ -1,0 +1,38 @@
+.svg-an-css {
+	svg {
+		display: block;
+		margin-bottom: 20px;
+	}
+	#strokedrect1 {
+		stroke: tomato;
+		fill: white;
+		stroke-width: 7;
+		stroke-dasharray: 10;
+		animation: marchingants 1s forwards infinite linear;
+	}
+
+	#strokedrect2 {
+		stroke: tomato;
+		fill: white;
+		stroke-width: 7;
+		stroke-dasharray: 1000;
+		stroke-dashoffset: 1000;
+		animation: dash 5s linear alternate infinite;
+	}
+}
+
+@keyframes marchingants {
+	to {
+		stroke-dashoffset: 19;
+	}
+}
+
+@keyframes dash {
+	from {
+		stroke-dashoffset: 822;
+	}
+
+	to {
+		stroke-dashoffset: 0;
+	}
+}

@@ -1,0 +1,70 @@
+.gradientAnimateBlock {
+	h3 {
+		margin-top: 0px;
+		margin-bottom: 60px;
+	}
+	canvas {
+		width: 100%;
+		height: 300px;
+		margin-bottom: 20px;
+	}
+
+	.bloc-logo {
+		position: relative;
+		width: 260px;
+		height: 100px;
+		margin: auto;
+	}
+
+	.bloc-logo canvas,
+	.bloc-logo .logo-mask {
+		display: block;
+		width: 260px;
+		height: 100px;
+	}
+
+	.bloc-logo .logo-mask {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-size: 260px;
+		background-image: url("https://sarcadass.github.io/granim.js/assets/img/logo-mask.png");
+		text-indent: -9999px;
+	}
+
+	.canvas-interactive-wrapper {
+		position: relative;
+		height: 300px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+	}
+
+	.canvas-interactive-wrapper canvas {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+
+	.canvas-interactive-wrapper .cta-wrapper a {
+		position: relative;
+		display: inline-block;
+		padding: 3px 7px;
+		border: solid 1px transparent;
+		margin-right: 50px;
+		z-index: 1;
+		text-decoration: none;
+		color: #222;
+		transition: border .3s;
+	}
+
+	.canvas-interactive-wrapper .cta-wrapper a.active {
+		border-color: #222;
+	}
+}

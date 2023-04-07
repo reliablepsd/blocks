@@ -1,0 +1,86 @@
+.box-socks-wraper {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	font-size: 40px;
+	margin-top: 30px;
+}
+
+.box1,
+.box2,
+.box3,
+.box4 {
+	background: #ccc;
+	height: 200px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0.7;
+}
+
+.box1 {
+	z-index: 1;
+}
+
+.box2 {
+	background: tomato;
+	z-index: 2;
+}
+
+.box3 {
+	background: blue;
+	z-index: 3;
+}
+
+.box4 {
+	background: green;
+	z-index: 4;
+}
+
+.wrapper-gsap {
+	width: 450px;
+	height: 50px;
+	position: relative;
+	margin: auto;
+	background: #ccc;
+	overflow: hidden;
+
+	.box {
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		background: red;
+		font-size: 25px;
+		line-height: 50px;
+		text-align: center;
+	}
+
+	.boxes {
+		position: relative;
+		left: -100px;
+		padding: 0 20px;
+	}
+}
+.gsap-new {
+	margin-top: 30px;
+	position: relative;
+	overflow-x: hidden;
+	height: 300px;
+
+	img {
+		position: absolute;
+		left: 0;
+		top: 50%;
+	}
+}
+.gsap-new2 {
+	margin-top: 30px;
+	position: relative;
+	overflow-x: hidden;
+	height: 300px;
+
+	.gsap-new2-img {
+		position: absolute;
+		left: 0%;
+	}
+}

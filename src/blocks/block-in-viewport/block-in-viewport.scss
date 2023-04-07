@@ -1,0 +1,12 @@
+.section {
+	background: #ccc;
+	height: 250px;
+}
+
+.section.once.in-viewport {
+	background: #0f0;
+}
+
+.section.in-viewport {
+	background: #fc0;
+}

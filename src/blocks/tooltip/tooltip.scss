@@ -1,0 +1,55 @@
+.tooltip-demo-list {
+	font-weight: bold;
+	font-size: 20px;
+	list-style: none;
+	overflow: hidden;
+	width: 600px;
+	padding: 50px 0;
+	margin: 0;
+	@include media("<=desktop") {
+		display: flex;
+		flex-direction: column;
+
+	}
+
+	li {
+		padding: 0 10px 10px;
+		width: 170px;
+		float: left;
+	}
+
+	a {
+		border: 1px solid #aaa;
+		padding: 5px 10px;
+		text-align: center;
+		display: block;
+		color: #000;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.hover-tooltip {
+	border: 1px solid #f00;
+	background: #faa;
+	padding: 5px 10px;
+	max-width: 100px;
+}
+
+.custom-example {
+	width: 100%;
+	padding: 10px 0 30px;
+	overflow: hidden;
+}
+
+.custom-tooltip {
+	border: 1px solid #aa0;
+	background: #ffa;
+	padding: 10px;
+
+	strong {
+		display: block;
+	}
+}

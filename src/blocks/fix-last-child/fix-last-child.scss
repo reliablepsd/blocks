@@ -1,0 +1,22 @@
+// use class last-el or first-el
+.fix-last-child-list {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+
+	li {
+		&:nth-of-type(n+2) {
+			&:before {
+		content: "|";
+		padding: 0 5px;
+		}
+		}
+		&.first-el {
+			&:before {
+			visibility: hidden;
+			}
+		}
+	}
+}

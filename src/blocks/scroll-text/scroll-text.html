@@ -1,0 +1,49 @@
+<div class="description-block">
+<p>Данный плагин позволяет реализовать циклическое прокручивание текста в пределах блока. Верстка под него очень похожа на верстку под карусель. Тоже есть маска и широкий блок, который содержит проскролливаемый текст (один или несколько абзацев).</p>
+<p>HTML-структура:</p>
+<pre class="html">
+&lt;div class="line-box"&gt; &lt;!-- Родительский блок, к которому будет подключаться плагин (может быть одновременно и маской) --&gt;
+	&lt;div class="line-wrap"&gt; &lt;!-- Блок, который будет скроллится --&gt;
+				&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...&lt;/p&gt; &lt;!-- Контент бегущей строки --&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+	</pre>
+<p>В плагине доступны следующие опции:</p>
+<pre class="javascript">
+jQuery('div.line-box').marquee({
+	mask: null,               // селектор маски (опционально, по умолчанию маской будет блок, к которому применён плагин)
+	line: 'div.line-wrap',    // селектор скроллящегося блока (по умолчанию прямой потомок маски)
+	items: '>*',              // селектор элементов в скроллящемся блоке (по умолчанию прямой потомок скролл.блока)
+	animSpeed: 50,            // скорость анимации (пикселей в секунду)
+	pauseOnHover: true,       // приостанавливать бегущую строку на ховер
+	hoverClass: 'hover',      // класс ховерного состояния бегущей строки
+	direction: 'left',        // направление движения "влево" или "вправо" ("left","right")
+	initialDelay: 0           // первоначальная задержка перед стартом бегущей строки (мсек)
+});
+</pre>
+</div>
+<h2>Примеры работы скрипта</h2>
+<div class="live-example">
+	<h3>Обычный пример:</h3>
+	<div class="line-box example1">
+		<div class="line-wrap">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dui neque, tempor in, fermentum vel, rutrum aliquam, mi. In quis massa adipiscing urna consequat mollis. Maecenas et leo. Suspendisse iaculis odio. In ac eros. Quisque elementum, justo non mattis pellentesque, odio nibh euismod dolor, quis scelerisque metus lacus consequat nisi. Sed nec turpis. Aenean ultrices purus dapibus orci. Fusce erat. Vivamus quis dolor vitae mi vulputate mollis. Sed tellus elit, tempus et, semper a, tincidunt in, <strong style="color: #f00">justo.</strong></p>
+		</div>
+	</div>
+</div>
+<div class="live-example">
+	<h3>Пример в котором мало контента:</h3>
+	<div class="line-box example1">
+		<div class="line-wrap">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong style="color: #f00">Justo.</strong></p>
+		</div>
+	</div>
+</div>
+<div class="live-example">
+	<h3>Обратный пример с первоначальной задержкой :</h3>
+	<div class="line-box example2">
+		<div class="line-wrap">
+			<p><strong style="color: #00f">Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Sed dui neque, tempor in, fermentum vel, rutrum aliquam, mi. In quis massa adipiscing urna consequat mollis. Maecenas et leo. Suspendisse iaculis odio. In ac eros. Quisque elementum, justo non mattis pellentesque, odio nibh euismod dolor, quis scelerisque metus lacus consequat nisi. Sed nec turpis. Aenean ultrices purus dapibus orci. Fusce erat. Vivamus quis dolor vitae mi vulputate mollis. Sed tellus elit, tempus et, semper a, tincidunt in, <strong style="color: #f00">justo.</strong></p>
+		</div>
+	</div>
+</div>

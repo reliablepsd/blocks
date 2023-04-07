@@ -1,0 +1,10 @@
+<form class="sub-form ajax-form-sent" method="post" action="../../module/jquery-validate-form/email-sender.php">
+	<fieldset>
+		<p> <input class="am-send-me" type="text" placeholder="Your name" name="name" minlength="4" data-rule-maxlength="16" data-rule-required="true"> </p>
+		<p> <input class="am-send-me" type="email" placeholder="Your email" data-rule-email="true" data-rule-required="true"> </p>
+		<p> <textarea class="am-send-me" placeholder="Your message" minlength="10" name="text"  data-rule-required="true"></textarea> </p>
+		<p><input type="submit" value="Submit"></p>
+		<div class="success-response">Email sent successfully</div>
+		<div class="error-response">Something went wrong, please try again later</div>
+	</fieldset>
+</form>

@@ -1,0 +1,32 @@
+<div class="parsley-val-container">
+	<h3>Example</h3>
+	<form action="" class="form-parsley">
+		<p>
+			<label for="fullname">Full Name * :</label>
+			<input type="text"  data-parsley-maxlength="8" required>
+		</p>
+		<p>
+			<label for="fullname">Name * :</label>
+			<input type="text" required data-parsley-minlength="4">
+		</p>
+		<p><label for="email">Email * :</label>
+			<input type="email" data-parsley-trigger="change" required></p>
+		<p>
+			<label for="contactMethod">Preferred Contact Method *:</label>
+			<br> Email: <input type="radio" name="contactMethod" id="contactMethodEmail" value="Email" required> Phone: <input type="radio" name="contactMethod" id="contactMethodPhone" value="Phone">
+		</p>
+		<p>
+			<label for="heard">Heard about us via *:</label>
+			<select id="heard" required="">
+				<option value="">Choose..</option>
+				<option value="press">Press</option>
+				<option value="net">Internet</option>
+				<option value="mouth">Word of mouth</option>
+				<option value="other">Other..</option>
+			</select>
+		</p>
+		<p>
+			<input type="submit">
+		</p>
+	</form>
+</div>

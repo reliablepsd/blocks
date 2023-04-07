@@ -1,0 +1,30 @@
+.toogleItemAnim,
+.toogleItemAnim2 {
+	padding: 10px 0px;
+	overflow: hidden;
+
+	p {
+		margin-bottom: 0;
+	}
+
+	.item {
+		.ask,
+		.ask2 {
+			font-size: 30px;
+			cursor: pointer;
+		}
+		.answer,
+		.answer2{
+			background: #ff0;
+			overflow: hidden;
+			display: none;
+			p {
+				padding: 5px 10px;
+			}
+		}
+	}
+}
+
+.open {
+	display: block !important;
+}

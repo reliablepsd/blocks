@@ -1,0 +1,102 @@
+.table-responsive {
+	border-collapse: collapse;
+	padding: 0;
+	margin: 0 0 10px;
+	width: 100%;
+
+	tr {
+		&:nth-child(odd) {
+			td {
+				background-color: rgba(0, 0, 0, 0.4);
+			}
+		}
+
+		td {
+			text-align: left;
+			border: 1px solid #f00;
+		}
+	}
+
+	th {
+		padding: 5px 10px;
+		border: 1px solid #f00;
+		color: #fff;
+		font-weight: normal;
+		background: #333;
+		font-weight: bold;
+		text-align: center;
+	}
+}
+
+@include media("<=desktop") {
+	.table-responsive {
+		width: 100%;
+		overflow: hidden;
+		border-top: 1px solid #f00;
+
+		tbody {
+			display: block;
+			border-left: 140px solid #333;
+			float: left;
+			width: 100%;
+			padding: 0 1px 0 1px;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			background: #f00;
+		}
+
+		tr {
+			float: left;
+			width: 100%;
+			background: #fff;
+			clear: both;
+		}
+
+		td {
+			box-sizing: content-box;
+			padding: 0 0 0 140px;
+			margin: 0 -1px 0 -141px;
+			float: left;
+			clear: both;
+			width: 100%;
+			white-space: nowrap;
+			border-top: 0;
+
+			&:before {
+				content: attr(data-label);
+				box-sizing: content-box;
+				padding: 5px 10px;
+				display: inline-block;
+				color: #fff !important;
+				font-weight: bold;
+				width: 120px;
+				vertical-align: middle;
+				margin: 0 0 0 -140px;
+				position: relative;
+				white-space: normal;
+			}
+
+			span {
+				white-space: normal;
+				display: inline-block;
+				vertical-align: middle;
+				padding: 5px 10px;
+				-moz-box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+		}
+
+		thead {
+			display: none;
+		}
+
+		tbody,
+		td,
+		tr,
+		& {
+			display: block;
+		}
+	}
+}

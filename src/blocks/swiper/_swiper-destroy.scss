@@ -1,0 +1,35 @@
+.my-swiper-destroy {
+	text-align: center;
+	overflow: hidden;
+
+	@media (max-width: 768px) {
+		--swiper-indent: 15px;
+		.swiper-wrapper {
+			margin-left: calc(var(--swiper-indent) * -1);
+			margin-right: calc(var(--swiper-indent) * -1);
+			width: calc(100% + var(--swiper-indent) * 2);
+			flex-wrap: wrap;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.swiper-slide {
+			width: 50%;
+			> div {
+				margin: 0 var(--swiper-indent) 15px;
+			}
+		}
+	}
+
+	@media (max-width: 568px) {
+		.swiper-slide {
+			width: 33.33333333333%;
+		}
+	}
+
+	@media (max-width: 468px) {
+		.swiper-slide {
+			width: 25%;
+		}
+	}
+}

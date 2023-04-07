@@ -1,0 +1,13 @@
+.mediumColor {
+	.image-container {
+		padding: 30px;
+		background-color: #eee;
+		transition: background-color .5s ease;
+	}
+}
+
+.mediumColor-col {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 10px;
+}
